@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "xero/google-maps",
+  "version": "0.0.1",
+  "title": "Google Maps",
+  "category": "xero",
+  "description": "Show maps with custom styles, markers and settings.",
+  "keywords": [
+    "maps",
+    "google"
+  ],
+  "example": {},
+  "attributes": {
+    "blockId": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number",
+      "default": 40.7127753
+    },
+    "lng": {
+      "type": "number",
+      "default": -74.0059728
+    },
+    "location": {
+      "type": "string",
+      "default": "New York, NY, USA"
+    },
+    "zoom": {
+      "type": "object"
+    },
+    "height": {
+      "type": "number",
+      "default": 350
+    },
+    "showZoomButtons": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMapTypeButtons": {
+      "type": "boolean",
+      "default": true
+    },
+    "showStreetViewButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "showFullscreenButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "optionScrollWheel": {
+      "type": "boolean",
+      "default": true
+    },
+    "gestureHandling": {
+      "type": "string",
+      "default": "greedy"
+    },
+    "optionDraggable": {
+      "type": "boolean",
+      "default": true
+    },
+    "content": {
+      "type": "string"
+    },
+    "style": {
+      "type": "object",
+      "default": {}
+    },
+    "styleCustom": {
+      "type": "string",
+      "default": ""
+    },
+    "markers": {
+      "type": "array",
+      "default": []
+    },
+    "fullHeight": {
+      "type": "boolean",
+      "default": false
+    },
+    "noApiStyle": {
+      "type": "object",
+      "default": {},
+      "selector": ".xero-google-map-iframe"
+    }
+  },
+  "textdomain": "advanced-google-map-block",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "supports": {
+    "html": false,
+    "className": false,
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}
